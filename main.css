@@ -1,0 +1,29 @@
+header{
+    text-align: center;
+}
+
+body{
+    background-color: aquamarine;
+    color:rgb(63, 47, 28);
+}
+
+#memeImage {
+    margin-right: 200px;
+}
+
+nav{
+    height: 6000px;
+    width: 200px;
+    float: left;
+    padding: 5px;
+    line-height: 30px;
+}
+
+footer{
+    text-align: center;
+    margin-right: 200px;
+}
+
+
+
+

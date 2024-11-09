@@ -1,0 +1,81 @@
+<!-- Guy Scamp -->
+ <!-- Document Type Tag -->
+ <!DOCTYPE html>
+ <!-- HTML Open Tag -->
+ <HTML>
+     <!-- Head Open Tag -->
+     <HEAD>
+         <!-- Title Tag -->
+         <TITLE>Palindrome Checker</TITLE>
+         <!-- CSS Link Tag-->
+         <link rel="stylesheet" href="main.css">
+         <!-- Style Open Tag -->
+          <!-- This is for the details of our button -->
+         <style>
+            .button {
+              border: none;
+              color: white;
+              padding: 16px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              transition-duration: 0.4s;
+              cursor: pointer;
+            }
+            
+            .button1 {
+              background-color: white; 
+              color: black; 
+              border: 2px solid #04AA6D;
+            }
+            
+            .button1:hover {
+              background-color: #04AA6D;
+              color: white;
+            }
+            
+            </style>
+     <!-- Head Close Tag -->
+     </HEAD>
+     <!-- Body Open Tag -->
+     <BODY> 
+        <!-- Form Open Tag --> 
+        <form>
+            <label for="Enter a word">Enter a word:</label>
+            <input type="text" id="word" name="word" required />
+            <button class="button button1" onclick="validatePalin()">Check</button>
+            <span class="validity"></span>
+        <!-- Form Close Tag-->
+        </form>
+        <!-- Script Open Tag -->
+        <SCRIPT>     
+            // This is our main function   
+            function validatePalin() {  
+            // Grabs the data from the text box in our html using the id
+            const string = document.getElementById("word");
+            // Converts the data into a valid string
+            const stringVal = string.value;
+            // Gets the total length of the word  
+            const len = stringVal.length;  
+            // Use for loop to divide the words into 2 halves  
+                for (let i = 0; i < len / 2; i++) {  
+                // Validate the first and last characters are same  
+                    if (stringVal[i] !== stringVal[len - 1 - i]) {
+                        // Outputs negative results  
+                        alert( 'It is not a palindrome');  
+                        break;
+                    } else {
+                        // Outputs positive results
+                        alert( 'It is a palindrome'); 
+                        break; 
+                    }  
+                }
+            }
+        // Script Close Tag
+        </SCRIPT>  
+    <!-- Body Close Tag-->
+    </BODY>
+<!-- HTML Open Tag-->
+</HTML>  
